@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <title>VSCode快捷键</title>
 </head>
 <body>
     <h1 id="ToTop">VSCode快捷键</h1>
     <div>
+        <div class="clickShow" onclick="showContent">点击</div>
         <ul class="content">
             <h3>目录</h3>
             <li><a href="#Common">常用</a></li>
@@ -254,19 +255,11 @@
     h1{
         text-align: center;
     }
-    h2,table{
-        margin-right: auto;
-        margin-left: 60px;
-    }
     h1,h2{
         padding-top: 10px;
     }
     .content{
-        border: 1px solid black;
-        position: fixed; 
-        top: 80px;
-        right: 40px;
-        padding: 10px;
+        background-color: #ffffff;
     }
     ul,li{
         list-style: none;
@@ -289,4 +282,45 @@
         padding: 0 20px;
         border: 1px solid black;
     }
+    /* 屏幕宽度小于1024 */
+    @media screen and (max-width: 1024px) {
+        .content{
+            display: none;
+        }
+        .clickShow{
+            position: fixed; 
+            top: 80px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+    }
+    /* 屏幕宽度大于1025 */  
+    @media  (min-width: 1025px) {
+        .content{
+            border: 1px solid black;
+            position: fixed; 
+            top: 80px;
+            right: 40px;
+            padding: 10px;
+        }
+        h2,table{
+            margin-right: auto;
+            margin-left: 60px;
+        }
+    }
 </style>
+
+<script>
+    const clickShow = document.getElementsByClassName("clickShow")
+    clickShow.onClick = () => {
+        showContent();
+    }
+
+    showContent = () => {
+        console.log('showContent')
+    }
+
+</script>

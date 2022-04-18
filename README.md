@@ -1,10 +1,16 @@
-# vscode快捷键
+# VSCode快捷键
 
 ## 运行
-`parcel index.html`
+```
+parcel index.html
+```
 
 ## 上传
-`sh ./deploy.sh`
+```
+sh ./deploy.sh
+```
 
-## 浏览
-`https://ericasun.github.io/vscode/`
+## github浏览地址
+```
+https://ericasun.github.io/vscode/
+```
