@@ -6,3 +6,5 @@
 ## 上传
 `sh ./deploy.sh`
 
+## 浏览
+`https://ericasun.github.io/vscode/`
