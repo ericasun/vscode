@@ -7,10 +7,11 @@
     <title>vsCode快捷键</title>
 </head>
 <body>
-    <div class="toTop"><a href="toTop">返回目录</a></div>
+    
     <h1 id=toTop>VSCode快捷键</h1>
     <div>
-        <ul>
+        <ul class="toTop">
+            <h3>目录</h3>
             <li><a href="#BasicEditing">基础编辑 Basic editing</a></li>
             <li><a href="#Navigation">导航 Navigation</a></li>
             <li><a href="#SearchAndReplace">搜索和替换 Search and replace</a></li>
@@ -21,6 +22,7 @@
             <li><a href="#Display">显示 Display</a></li>
             <li><a href="#Debug">调试 Debug</a></li>
             <li><a href="#IntegratedTerminal">集成终端 Integrated terminal</a></li>
+            <li><a href="toTop">返回顶部</a></li>
         </ul>
     </div>
     <main>
@@ -247,21 +249,31 @@
 </body>
 </html>
 
-<style >
-    h1,h2{
+<style>
+    h1{
         text-align: center;
     }
+    h2,table{
+        margin-right: auto;
+        margin-left: 60px;
+    }
+    h1,h2{
+        padding-top: 10px;
+    }
     .toTop{
+        border: 1px solid black;
         position: fixed; 
         top: 80px;
-        right:80px;
+        right: 50px;
+        padding: 10px;
+    }
+    ul,li{
+        list-style: none;
     }
     main{
         padding: 10px;
     }
     table{
-        margin-right: auto;
-        margin-left: auto;
         margin-bottom: 50px;
         border:2px solid black;
         border-collapse: collapse;
