@@ -9,7 +9,7 @@
 <body>
     <h1 id="ToTop">VSCode快捷键</h1>
     <div>
-        <div class="clickShow" onclick="showContent">点击</div>
+        <div class="square">点击</div>
         <ul class="content">
             <h3>目录</h3>
             <li><a href="#Common">常用</a></li>
@@ -287,7 +287,7 @@
         .content{
             display: none;
         }
-        .clickShow{
+        .square{
             position: fixed; 
             top: 80px;
             right: 15px;
@@ -306,21 +306,39 @@
             right: 40px;
             padding: 10px;
         }
+        .square{
+            display: none;
+        }
         h2,table{
             margin-right: auto;
             margin-left: 60px;
         }
     }
+    .showContent{
+        border: 2px solid black;
+        display: block;
+        position: fixed; 
+        top: 80px;
+        left: 15px;
+    }
+    .displaySquare{
+        display: none;
+    }
 </style>
 
 <script>
-    const clickShow = document.getElementsByClassName("clickShow")
-    clickShow.onClick = () => {
-        showContent();
+    const square = document.getElementsByClassName("square")[0]
+    const content = document.getElementsByClassName("content")[0]
+    square.onclick = (e) => {
+        e.stopPropagation();
+        content.classList.add("showContent")
+        square.classList.add("displaySquare")
     }
 
-    showContent = () => {
-        console.log('showContent')
+    const body = document.getElementsByTagName("body")[0];
+    body.onclick = (e) => {
+        e.stopPropagation();
+        content.classList.remove("showContent")
+        square.classList.remove("displaySquare")
     }
-
 </script>
