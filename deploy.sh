@@ -1,4 +1,5 @@
 git rm -r --cached . 
+git rm -r dist . 
 git add . &&
 git commit -m "update" &&
 git branch -M main &&
